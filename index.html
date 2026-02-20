@@ -15,7 +15,6 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f0c29;
 background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:#fff;
 overflow-x:hidden;
@@ -24,7 +23,7 @@ overflow-x:hidden;
 /* HERO */
 .hero{
 text-align:center;
-padding:40px 20px;
+padding:40px 20px 20px 20px;
 }
 
 .hero h1{
@@ -38,37 +37,23 @@ margin-bottom:10px;
 .download-count{
 font-size:14px;
 color:#00ffcc;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
-/* SLIDER */
-.slider{
-width:100%;
+/* BANNER */
+.banner{
+width:95%;
 max-width:800px;
-margin:20px auto;
-overflow:hidden;
+margin:0 auto;
 border-radius:20px;
+overflow:hidden;
 box-shadow:0 0 40px rgba(0,0,0,0.6);
+animation:fadeIn 1.2s ease-in-out;
 }
 
-.slides{
-display:flex;
-width:200%;
-animation:slide 8s infinite;
-}
-
-.slides img{
+.banner img{
 width:100%;
-height:250px;
-object-fit:cover;
-}
-
-@keyframes slide{
-0%{transform:translateX(0);}
-45%{transform:translateX(0);}
-50%{transform:translateX(-100%);}
-95%{transform:translateX(-100%);}
-100%{transform:translateX(0);}
+display:block;
 }
 
 /* BUTTONS */
@@ -76,7 +61,7 @@ object-fit:cover;
 display:block;
 width:90%;
 max-width:400px;
-margin:15px auto;
+margin:18px auto;
 padding:14px;
 border-radius:50px;
 text-align:center;
@@ -108,7 +93,7 @@ box-shadow:0 0 20px #ff008c;
 /* DESCRIPTION */
 .description{
 text-align:center;
-padding:20px;
+padding:25px;
 color:#ccc;
 }
 
@@ -135,7 +120,6 @@ color:#00f5ff;
 .review-container{
 height:160px;
 overflow:hidden;
-position:relative;
 }
 
 .review-track{
@@ -160,6 +144,11 @@ color:#00ffcc;
 0%{transform:translateY(0);}
 100%{transform:translateY(-50%);}
 }
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
 </style>
 </head>
 
@@ -170,12 +159,9 @@ color:#00ffcc;
 <div class="download-count">🔥 65K+ Total Downloads</div>
 </div>
 
-<!-- IMAGE SLIDER -->
-<div class="slider">
-<div class="slides">
-<img src="https://i.ytimg.com/vi/xBaxQ_dMdTk/maxresdefault.jpg">
+<!-- SINGLE BANNER -->
+<div class="banner">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu2_3xppwN_z9dmHHxdUGnJe_MORre0cuQxdzW0vGEt6Ki5D6iKvNgh8-C&s=10">
-</div>
 </div>
 
 <div class="description">
@@ -191,7 +177,7 @@ DOWNLOAD PANEL
 CONTACT ON WHATSAPP
 </a>
 
-<!-- REVIEW SECTION -->
+<!-- REVIEWS -->
 <div class="review-section">
 <div class="review-title">⭐ User Reviews</div>
 <div class="review-container">
@@ -203,7 +189,6 @@ CONTACT ON WHATSAPP
 <div class="review"><strong>Imran Hossain:</strong> সবাই নিতে পারেন ১০০% সেফ এবং আমার ৩ জিবি রেম এর ফোনে ও খেলা যায়।</div>
 <div class="review"><strong>Mahin Chowdhury:</strong> সব ফোনে সাপোর্ট করে।</div>
 
-<!-- duplicate for smooth loop -->
 <div class="review"><strong>Rony Ahmed:</strong> আমি ৭২ লেভেল এর আইডিতে খেলছি ১০০% working।</div>
 <div class="review"><strong>Shakib Hasan:</strong> সেই হেডসট লাগে ভাই 😱।</div>
 <div class="review"><strong>Tanvir Islam:</strong> কি জিনিস দিলেন ভাই পুরোই আগুন।</div>
