@@ -8,111 +8,210 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-    color:white;
+background:#0f0c29;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:#fff;
+overflow-x:hidden;
 }
 
-.container{
-    width:90%;
-    max-width:500px;
-    padding:40px;
-    text-align:center;
-    border-radius:20px;
-    backdrop-filter: blur(15px);
-    background:rgba(255,255,255,0.05);
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
-    animation: fadeIn 1.2s ease-in-out;
+/* HERO */
+.hero{
+text-align:center;
+padding:40px 20px;
 }
 
-h1{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:10px;
-    background:linear-gradient(90deg,#00f5ff,#ff00f5);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.hero h1{
+font-size:32px;
+background:linear-gradient(90deg,#00f5ff,#ff00f5);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
 }
 
-p{
-    font-size:14px;
-    color:#ccc;
-    margin-bottom:30px;
+.download-count{
+font-size:14px;
+color:#00ffcc;
+margin-bottom:15px;
 }
 
+/* SLIDER */
+.slider{
+width:100%;
+max-width:800px;
+margin:20px auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,0,0,0.6);
+}
+
+.slides{
+display:flex;
+width:200%;
+animation:slide 8s infinite;
+}
+
+.slides img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{transform:translateX(0);}
+45%{transform:translateX(0);}
+50%{transform:translateX(-100%);}
+95%{transform:translateX(-100%);}
+100%{transform:translateX(0);}
+}
+
+/* BUTTONS */
 .btn{
-    display:block;
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    border:none;
-    border-radius:50px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-    text-decoration:none;
+display:block;
+width:90%;
+max-width:400px;
+margin:15px auto;
+padding:14px;
+border-radius:50px;
+text-align:center;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
 .download-btn{
-    background:linear-gradient(90deg,#00f5ff,#00ff9d);
-    color:#000;
+background:linear-gradient(90deg,#00f5ff,#00ff9d);
+color:#000;
 }
 
 .download-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px #00ffcc;
+transform:scale(1.05);
+box-shadow:0 0 20px #00ffcc;
 }
 
 .contact-btn{
-    background:linear-gradient(90deg,#ff00f5,#ff0066);
-    color:white;
+background:linear-gradient(90deg,#ff00f5,#ff0066);
+color:white;
 }
 
 .contact-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px #ff008c;
+transform:scale(1.05);
+box-shadow:0 0 20px #ff008c;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+/* DESCRIPTION */
+.description{
+text-align:center;
+padding:20px;
+color:#ccc;
+}
+
+/* REVIEW SECTION */
+.review-section{
+margin-top:40px;
+padding:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:20px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+overflow:hidden;
+}
+
+.review-title{
+text-align:center;
+margin-bottom:20px;
+font-size:20px;
+color:#00f5ff;
+}
+
+.review-container{
+height:160px;
+overflow:hidden;
+position:relative;
+}
+
+.review-track{
+display:flex;
+flex-direction:column;
+animation:scrollReview 15s linear infinite;
+}
+
+.review{
+background:rgba(255,255,255,0.08);
+padding:12px;
+margin:8px 0;
+border-radius:12px;
+font-size:14px;
+}
+
+.review strong{
+color:#00ffcc;
+}
+
+@keyframes scrollReview{
+0%{transform:translateY(0);}
+100%{transform:translateY(-50%);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>GX FF PANEL</h1>
-    <p>
-        Premium Quality Free Fire Panel with smooth performance, 
-        clean UI and advanced features.  
-        Safe, Fast & Powerful experience guaranteed.
-    </p>
+<div class="hero">
+<h1>GX FF PANEL</h1>
+<div class="download-count">🔥 65K+ Total Downloads</div>
+</div>
 
-    <!-- DOWNLOAD BUTTON -->
-    <a href="https://github.com/Hacker999G/GX-FF-PANEL-/releases/download/GX/GX.FF.PANEL.apk" 
-       class="btn download-btn">
-       DOWNLOAD PANEL
-    </a>
+<!-- IMAGE SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="https://i.ytimg.com/vi/xBaxQ_dMdTk/maxresdefault.jpg">
+<img src="https://apktodo.io/uploads/2025/4/rony-ff-panel-download.jpg">
+</div>
+</div>
 
-    <!-- CONTACT BUTTON -->
-    <a href="https://wa.me/qr/TZ62EHBH2F4BL1?text=%E0%A6%AD%E0%A6%BE%E0%A6%87%20%E0%A6%AA%E0%A7%87%E0%A6%A8%E0%A7%87%E0%A6%B2%20%E0%A6%B2%E0%A6%BE%E0%A6%97%E0%A6%AC%E0%A7%87!!%F0%9F%96%A4%F0%9F%98%85" 
-       class="btn contact-btn">
-       CONTACT ON WHATSAPP
-    </a>
+<div class="description">
+Premium Quality FF Panel with Smooth Performance.<br>
+Safe • Fast • Powerful • All Devices Supported
+</div>
 
+<a href="https://github.com/Hacker999G/GX-FF-PANEL-/releases/download/GX/GX.FF.PANEL.apk" class="btn download-btn">
+DOWNLOAD PANEL
+</a>
+
+<a href="https://wa.me/qr/TZ62EHBH2F4BL1?text=%E0%A6%AD%E0%A6%BE%E0%A6%87%20%E0%A6%AA%E0%A7%87%E0%A6%A8%E0%A7%87%E0%A6%B2%20%E0%A6%B2%E0%A6%BE%E0%A6%97%E0%A6%AC%E0%A7%87!!%F0%9F%96%A4%F0%9F%98%85" class="btn contact-btn">
+CONTACT ON WHATSAPP
+</a>
+
+<!-- REVIEW SECTION -->
+<div class="review-section">
+<div class="review-title">⭐ User Reviews</div>
+<div class="review-container">
+<div class="review-track">
+
+<div class="review"><strong>Rony Ahmed:</strong> আমি ৭২ লেভেল এর আইডিতে খেলছি ১০০% working।</div>
+<div class="review"><strong>Shakib Hasan:</strong> সেই হেডসট লাগে ভাই 😱।</div>
+<div class="review"><strong>Tanvir Islam:</strong> কি জিনিস দিলেন ভাই পুরোই আগুন।</div>
+<div class="review"><strong>Imran Hossain:</strong> সবাই নিতে পারেন ১০০% সেফ এবং আমার ৩ জিবি রেম এর ফোনে ও খেলা যায়।</div>
+<div class="review"><strong>Mahin Chowdhury:</strong> সব ফোনে সাপোর্ট করে।</div>
+
+<!-- duplicate for smooth loop -->
+<div class="review"><strong>Rony Ahmed:</strong> আমি ৭২ লেভেল এর আইডিতে খেলছি ১০০% working।</div>
+<div class="review"><strong>Shakib Hasan:</strong> সেই হেডসট লাগে ভাই 😱।</div>
+<div class="review"><strong>Tanvir Islam:</strong> কি জিনিস দিলেন ভাই পুরোই আগুন।</div>
+<div class="review"><strong>Imran Hossain:</strong> সবাই নিতে পারেন ১০০% সেফ এবং আমার ৩ জিবি রেম এর ফোনে ও খেলা যায়।</div>
+<div class="review"><strong>Mahin Chowdhury:</strong> সব ফোনে সাপোর্ট করে।</div>
+
+</div>
+</div>
 </div>
 
 </body>
